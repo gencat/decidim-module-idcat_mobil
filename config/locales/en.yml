@@ -1,0 +1,21 @@
+---
+en:
+  decidim:
+    components:
+      idcat_mobil:
+        name: IdcatMobil
+    verifications:
+      idcat_mobil:
+        errors:
+          invalid_method: Could not verify you. OAuth2 verification method was not 'idcatmobil' as expected.
+          invalid_status: Could not verify you. OAuth2 verification was not ok.
+        invalid:
+          email_intro: It has not been possible to grant you the IdCat mòbil authorization.
+          email_outro: Please, contact the support at your platform to check what has gone wrong.
+          email_subject: You could not be authorized for IdCat mòbil
+          notification_title: Invalid IdCat mòbil authentication
+        ok:
+          email_intro: You have ben granted IdCat mòbil authorization.
+          email_outro: You can now perform all actions that require IdCat mòbil authorization.
+          email_subject: You've been authorized for IdCat mòbil
+          notification_title: Successful IdCat mòbil authentication
