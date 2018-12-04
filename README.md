@@ -10,7 +10,7 @@ To use it you have to first configure the omniauth-idcat_mobil and then this gem
 ### omniauth-idcat_mobil configuration
 IdcatMobil will be available as a configurable OAuth strategy.
 To configure the strategy go to [Decidim's related documentation]().
-Refer to omniauth-idcat_mobil gem for further documentation.
+Refer to `omniauth-idcat_mobil` gem for further documentation.
 
 ### Decidim Verifier configuration
 This verifier is already configured through `decidim_verifications.rb` initializer in this engine.
