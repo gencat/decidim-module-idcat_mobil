@@ -4,7 +4,7 @@ module Decidim
   # This holds the decidim-meetings version.
   module IdcatMobil
     def self.version
-      "0.16.0.dev"
+      "0.0.1"
     end
   end
 end
