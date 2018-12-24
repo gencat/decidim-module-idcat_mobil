@@ -3,19 +3,6 @@
 User registration, login and verification through IdCat mòbil, an authentication method that uses OAuth 2.0 protocol.
 _IdCat mòbil_ is an identity validator from VÀLid (Validador d'Identitats del Consorci AOC).
 
-## Usage
-
-To use it you have to first configure the omniauth-idcat_mobil and then this gem as a verification handler.
-
-### omniauth-idcat_mobil configuration
- `IdCat mòbil` will be available as a configurable OAuth2 strategy.
-IdcatMobil will be available as a configurable OAuth strategy.
-To configure the strategy go to [Decidim's related documentation]().
-Refer to `omniauth-idcat_mobil` gem for further documentation.
-
-### Decidim Verifier configuration
-This verifier is already configured through `decidim_verifications.rb` initializer in this engine.
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -27,8 +14,27 @@ gem 'decidim-idcat_mobil'
 And then execute:
 
 ```bash
-bundle
+bundle install
 ```
+
+## Usage
+
+To use it you have to first configure the omniauth-idcat_mobil and then this gem as a verification handler.
+
+### omniauth-idcat_mobil configuration
+`IdCat mòbil` will be available as a configurable OAuth2 strategy.
+Check how to configure the strategy in [Decidim's related documentation](). The summary is that you have to edit your `config/secrets.rb` and simply enable the strategy:
+
+```yaml
+  omniauth:
+    idcat_mobil:
+      enabled: true
+```
+
+Omniauth's configuration is setted in `config/initializers/omniauth_idcat_mobil.rb`. Nothing has to be modified there but it expects `IDCAT_MOBIL_CLIENT_ID`, `IDCAT_MOBIL_CLIENT_SECRET` and `IDCAT_MOBIL_SITE_URL` environment variables to be setted.
+
+
+Refer to `omniauth-idcat_mobil` gem for further documentation.
 
 ## Contributing
 
