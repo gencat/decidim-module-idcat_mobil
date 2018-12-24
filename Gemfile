@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 # development dependencies will be added by default to the :development group.
 gemspec
 
-# before going stable
+# before going stable pull form master
 gem 'omniauth-idcat_mobil', git: 'https://github.com/gencat/omniauth-idcat_mobil'
 
 group :development, :test do
