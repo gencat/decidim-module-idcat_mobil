@@ -1,0 +1,31 @@
+---
+ca:
+  decidim:
+    authorization_handlers:
+      id_cat_mobil_handler:
+        explanation: Verifica't a través de l'IdCat mòbil del sistema VALid de l'AOC
+        name: IdCat mòbil
+      idcat_mobil_profile:
+        explanation: Verifica't a través de l'IdCat mòbil del sistema VALid de l'AOC
+        name: IdCat mòbil
+      id_cat_mobil_profile_handler:
+        explanation: Verifica't a través de l'IdCat mòbil del sistema VALid de l'AOC
+        name: IdCat mòbil
+    components:
+      idcat_mobil:
+        name: IdcatMobil
+    verifications:
+      idcat_mobil:
+        errors:
+          invalid_method: No se t'ha pogut verificar. S'ha invocat el verificador OAuth2 d'IdCat mòbil però el mètode no és 'idcatmobil' com s'esperava.
+          invalid_status: No se t'ha pogut verificar. La resposta d'OAuth2 no ha estat ok.
+        invalid:
+          email_intro: No ha estat possible verificar-te amb l'autorització IdCat mòbil.
+          email_outro: Si us plau, contacta al servei de suport de la teva plataforma per comprovar què ha anat malament.
+          email_subject: No se t'ha pogut verificar per IdCat mòbil
+          notification_title: La verificació IdCat mòbil ha estat invàlida
+        ok:
+          email_intro: Se t'ha atorgat l'autorització IdCat mòbil.
+          email_outro: Ja pots dur a terme totes les accions permeses per IdCat mòbil.
+          email_subject: Has rebut l'autorització IdCat mòbil
+          notification_title: La verificació IdCat mòbil ha reeixit

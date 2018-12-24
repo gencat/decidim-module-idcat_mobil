@@ -1,6 +1,9 @@
 ---
 en:
   decidim:
+    authorization_handlers:
+      id_cat_mobil_handler:
+        name: IdCat mòbil
     components:
       idcat_mobil:
         name: IdcatMobil
