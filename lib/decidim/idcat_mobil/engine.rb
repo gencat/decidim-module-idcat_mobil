@@ -20,7 +20,10 @@ module Decidim
       # NOTE: Remove this initializer when in Decidim 0.16.0 where it has been fixed.
       #
       initializer "decidim.middleware" do |app|
-        app.config.middleware.delete Decidim::CurrentOrganization
+        # as `app.config.middleware` is just a proxy made available for configuration purposes
+        # and acts as a command recorder that executes deletes always at the end
+        # we can not remove and re-insert, but only duplicate `Decidim::CurrentOrganization`.
+        # app.config.middleware.delete Decidim::CurrentOrganization
         app.config.middleware.insert_before Warden::Manager, Decidim::CurrentOrganization
       end
 
