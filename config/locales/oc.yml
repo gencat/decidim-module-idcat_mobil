@@ -1,0 +1,21 @@
+---
+oc:
+  decidim:
+    components:
+      idcat_mobil:
+        name: IdCat Mòbil
+    verifications:
+      idcat_mobil:
+        errors:
+          invalid_method: No vos auetz pogut verificar. Eth metòde de verificacion OAuth2 non ère "idcat_mobil" tau coma se demoraue.
+          invalid_status: No vos auetz pogut verificar. Era verificacion OAuth2 a estat corrècta.
+        invalid:
+          email_intro: Non s'a pogut concedir era autorizacion de IdCat Mòbil.
+          email_outro: Se vos platz, metetz-vos eth contacte damb eth supòrt dera vòsta plataforma entà verificar er error que s'a produsit.
+          email_subject: No vos auetz pogut atoritzar damb IdCat Mòbil
+          notification_title: No vos auetz pogut atoritzar damb IdCat Mòbil
+        ok:
+          email_intro: Se vos a concedit era autorizacion damb IdCat Mòbil.
+          email_outro: Ara podetz realizar totes es accions que requerisquen era autorizacion de IdCat Mòbil.
+          email_subject: As estat autorizat damb IdCat Mòbil.
+          notification_title: Eth autenticació damb IdCat Mòbil a acabat damb succès.

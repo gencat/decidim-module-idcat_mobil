@@ -1,0 +1,21 @@
+---
+es:
+  decidim:
+    components:
+      idcat_mobil:
+        name: IdCat Mòbil
+    verifications:
+      idcat_mobil:
+        errors:
+          invalid_method: No se pudo verificar. El método de verificación OAuth2 no fue 'idcat_mobil' como se esperaba.
+          invalid_status: No se pudo verificar. La verificación OAuth2 no ha sido correcta.
+        invalid:
+          email_intro: No ha sido posible otorgarle la autorización IdCat Mòbil.
+          email_outro: Por favor, póngase en contacto con el soporte en su plataforma para comprobar qué ha fallado.
+          email_subject: Usted no ha podido ser autorizado para IdCat Mòbil
+          notification_title: Autenticación IdCat Mòbil no válida
+        ok:
+          email_intro: Se le ha concedido la autorización IdCat Mòbil.
+          email_outro: Ahora puede realizar todas las acciones que requieren la autorización de IdCat Mòbil.
+          email_subject: Has sido autorizado con IdCat Mòbil
+          notification_title: La autenticación con IdCat Mòbil ha sido exitosa
