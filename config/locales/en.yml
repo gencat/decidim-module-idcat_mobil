@@ -15,7 +15,7 @@ en:
           email_subject: You could not be authorized for IdCat mòbil
           notification_title: Invalid IdCat mòbil authentication
         ok:
-          email_intro: You have ben granted IdCat mòbil authorization.
+          email_intro: You have been granted IdCat mòbil authorization.
           email_outro: You can now perform all actions that require IdCat mòbil authorization.
           email_subject: You've been authorized for IdCat mòbil
           notification_title: Successful IdCat mòbil authentication
