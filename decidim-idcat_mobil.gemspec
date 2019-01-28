@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
 
-  s.add_dependency "omniauth-idcat_mobil", ">= 0.1.1"
+  s.add_dependency "omniauth-idcat_mobil", "~> 0.1"
   DECIDIM_VERSION= ">= 0.13.1"
   s.add_dependency "decidim", DECIDIM_VERSION
   s.add_dependency "decidim-core", DECIDIM_VERSION
