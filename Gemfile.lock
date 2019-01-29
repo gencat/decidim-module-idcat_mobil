@@ -191,7 +191,7 @@ PATH
     decidim-idcat_mobil (0.0.1)
       decidim (>= 0.13.1)
       decidim-core (>= 0.13.1)
-      omniauth-idcat_mobil (>= 0.1.1)
+      omniauth-idcat_mobil (~> 0.1.1)
 
 GEM
   remote: https://rubygems.org/
