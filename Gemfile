@@ -9,8 +9,6 @@ ruby RUBY_VERSION
 # development dependencies will be added by default to the :development group.
 gemspec
 
-gem 'omniauth-idcat_mobil', '>= 0.1.1'
-
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
   gem "bootsnap"
