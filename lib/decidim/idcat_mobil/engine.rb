@@ -2,6 +2,7 @@
 
 require "rails"
 require "decidim/core"
+require "omniauth/idcat_mobil"
 
 module Decidim
   module IdcatMobil
