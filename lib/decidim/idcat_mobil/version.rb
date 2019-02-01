@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 module Decidim
-  # This holds the decidim-meetings version.
   module IdcatMobil
     def self.version
-      "0.0.1"
+      # See CHANGELOG.md to see what changed
+      "0.0.2"
     end
   end
 end
