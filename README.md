@@ -58,3 +58,6 @@ rspec spec
 ## License
 
 This engine is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+
+Authored by [CodiTramuntana](http://coditramuntana.com).
+
