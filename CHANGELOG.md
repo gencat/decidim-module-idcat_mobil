@@ -4,6 +4,9 @@ This project is in BETA, but going to be tested in production.
 
 ## next version:
 
+## Version 0.0.4 (PATCH)
+- Remove Gemfile.lock to avoid problems with apps using this gem and solving devise vulneravility: https://github.com/plataformatec/devise/issues/4981.
+
 ## Version 0.0.3 (PATCH)
 - Copied icon from omniauth-idcat_mobil to be used since decidim v0.16.0.
 
