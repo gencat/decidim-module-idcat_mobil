@@ -37,6 +37,9 @@ Omniauth's configuration is setted in `config/initializers/omniauth_idcat_mobil.
 
 Refer to `omniauth-idcat_mobil` gem for further documentation.
 
+## TODO
+After decidim v0.16, remove from `lib/decidim/idcat_mobil/engine.rb:23` the `initializer "decidim.middleware"`.
+
 ## Contributing
 
 See [Decidim](https://github.com/decidim/decidim).
