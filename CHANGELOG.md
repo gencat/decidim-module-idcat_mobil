@@ -4,6 +4,10 @@ This project is in BETA, but going to be tested in production.
 
 ## next version:
 
+## Version 0.0.5 (MINOR)
+- Make gem compatible with Decidim v0.20 (tested against decidim v0.21)
+- Remove initializer to force `Decidim::CurrentOrganization` to be executed before `Warden::Manager`. It is already done in Decidim since v0.16
+
 ## Version 0.0.4 (PATCH)
 - Remove Gemfile.lock to avoid problems with apps using this gem and solving devise vulneravility: https://github.com/plataformatec/devise/issues/4981.
 
