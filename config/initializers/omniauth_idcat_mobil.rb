@@ -7,5 +7,3 @@ Devise.setup do |config|
                   ENV["IDCAT_MOBIL_SITE_URL"],
                   scope: :autenticacio_usuari
 end
-
-Decidim::User.omniauth_providers << :idcat_mobil
