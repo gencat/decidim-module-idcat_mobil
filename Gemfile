@@ -10,7 +10,7 @@ ruby RUBY_VERSION
 gemspec
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
+  gem "byebug"
   gem "bootsnap"
   gem "decidim", git: "https://github.com/decidim/decidim"
   gem "decidim-dev", git: "https://github.com/decidim/decidim"
