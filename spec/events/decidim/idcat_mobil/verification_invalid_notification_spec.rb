@@ -12,14 +12,14 @@ describe Decidim::IdcatMobil::VerificationInvalidNotification do
 
   describe "email_subject" do
     it "is generated correctly" do
-      expect(subject.email_subject).to eq("You could not be authorized for IdCat mòbil")
+      expect(subject.email_subject).to eq("You could not be authorized for IdCat Mòbil")
     end
   end
 
   describe "email_intro" do
     it "is generated correctly" do
       expect(subject.email_intro)
-        .to eq("It has not been possible to grant you the IdCat mòbil authorization.")
+        .to eq("It has not been possible to grant you the IdCat Mòbil authorization.")
     end
   end
 
@@ -33,7 +33,7 @@ describe Decidim::IdcatMobil::VerificationInvalidNotification do
   describe "notification_title" do
     it "is generated correctly" do
       expect(subject.notification_title)
-        .to include("Invalid IdCat mòbil authentication")
+        .to include("Invalid IdCat Mòbil authentication")
     end
   end
 end

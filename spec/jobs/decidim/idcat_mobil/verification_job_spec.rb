@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-require "decidim/verifications/idcat_mobil_handler"
+require "decidim/verifications/id_cat_mobil_handler"
 
 module Decidim::IdcatMobil
   describe VerificationJob do
