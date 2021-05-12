@@ -1,8 +1,17 @@
 # Changelog
 Following Semantic Versioning 2.
-This project is in BETA, but going to be tested in production.
 
 ## next version:
+
+## Version 0.0.6 (MINOR)
+
+- Make gem compatible with Decidim v0.23.
+- DOC: Explain that verification is uncomplete.
+- Do not force `byebug` version.
+- Force English locale when executing tests.
+- Update literals in tests.
+- Add `.byebug_history` file to `.gitignore`.
+- Make module compatible with Decidim's per organization configuration.
 
 ## Version 0.0.5 (MINOR)
 - Make gem compatible with Decidim v0.20 (tested against decidim v0.21)
