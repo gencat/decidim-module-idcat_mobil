@@ -63,7 +63,7 @@ bundle exec rspec spec/
 
 ## License
 
-This engine is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+
+The Department d'Exteriors of [Generalitat de Catalunya](http://gencat.cat) makes this gem available as open source under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE.
 
 Authored by [CodiTramuntana](http://coditramuntana.com).
-
