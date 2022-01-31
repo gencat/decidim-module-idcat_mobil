@@ -3,6 +3,9 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.0.9 (PATCH)
+- Force minimum `omniauth-idcat_mobil` to v0.2.4.
+
 ## Version 0.0.8 (PATCH)
 - Force minimum `omniauth-idcat_mobil` to v0.2.3.
 - Add `.ruby-version` file
