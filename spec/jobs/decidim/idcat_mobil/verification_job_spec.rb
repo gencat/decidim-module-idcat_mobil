@@ -6,7 +6,6 @@ require "decidim/verifications/id_cat_mobil_handler"
 
 module Decidim::IdcatMobil
   describe VerificationJob do
-
     def pending_to_be_finished
       pending("Implementation pending, this Decidim module does not support user verification")
     end
