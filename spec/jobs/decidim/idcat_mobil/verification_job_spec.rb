@@ -6,6 +6,11 @@ require "decidim/verifications/id_cat_mobil_handler"
 
 module Decidim::IdcatMobil
   describe VerificationJob do
+
+    def pending_to_be_finished
+      pending("Implementation pending, this Decidim module does not support user verification")
+    end
+
     let!(:user) { create(:user) }
     let!(:identity) { create(:identity, provider: "idecat_mobil", user: user) }
     let(:oauth_data) do
@@ -41,6 +46,7 @@ module Decidim::IdcatMobil
     context "when omniauth_registration event is notified" do
       context "when authorization is created with success" do
         it "notifies the user for the success" do
+          pending_to_be_finished
           stub_rectify_publisher("Decidim::Verifications::AuthorizeUser", :call, :ok)
           expect(Decidim::EventsManager)
             .to receive(:publish)
@@ -60,6 +66,7 @@ module Decidim::IdcatMobil
 
       context "when authorization creation fails" do
         it "notifies the user for the failure" do
+          pending_to_be_finished
           stub_rectify_publisher("Decidim::Verifications::AuthorizeUser", :call, :invalid)
           expect(Decidim::EventsManager)
             .to receive(:publish)
