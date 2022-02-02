@@ -22,10 +22,14 @@ module Decidim::IdcatMobil
       }
     end
 
+    # rubocop: disable Lint/ConstantDefinitionInBlock
     class TestRectifyPublisher < Rectify::Command
       include Wisper::Publisher
+      # rubocop: disable Lint/MissingSuper
       def initialize(*args); end
+      # rubocop: enable Lint/MissingSuper
     end
+    # rubocop: enable Lint/ConstantDefinitionInBlock
     def stub_rectify_publisher(clazz, called_method, event_to_publish, *published_event_args)
       stub_const(clazz, Class.new(TestRectifyPublisher) do
         define_method(called_method) do |*_args|
