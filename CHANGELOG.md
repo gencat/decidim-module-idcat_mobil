@@ -3,6 +3,11 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.1.0 (MINOR)
+- CI: Intoduce continous integration via GitHub Actions.
+- CI: Apply `rubocop` recommendations.
+- Force minimum `omniauth-idcat_mobil` to v0.3.0.
+
 ## Version 0.0.9 (PATCH)
 - Force minimum `omniauth-idcat_mobil` to v0.2.4.
 
