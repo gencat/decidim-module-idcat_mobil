@@ -4,10 +4,11 @@ module Decidim
   module IdcatMobil
     class VerificationSuccessNotification < Decidim::Events::SimpleEvent
       def resource_path
-        'http'
+        "http"
       end
+
       def resource_url
-        'http'
+        "http"
       end
     end
   end
