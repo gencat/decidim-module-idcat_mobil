@@ -7,9 +7,6 @@
 /spec/reports/
 /tmp/
 
-# Remove Gemfile.lock to avoid problems with apps using this gem.
-Gemfile.lock
-
 # rspec failure tracking
 .rspec-failures
 

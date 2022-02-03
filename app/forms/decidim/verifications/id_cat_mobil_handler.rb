@@ -7,14 +7,14 @@ module Decidim
       attribute :oauth_data, Hash
 
       validates :unique_id, presence: true
-      validate :is_idcatmobil_method, :has_ok_status
+      validate :idcatmobil_method?, :has_ok_status?
 
       def unique_id
-        oauth_data['identifier']
+        oauth_data["identifier"]
       end
 
       def metadata
-       oauth_data
+        oauth_data
       end
 
       def user
@@ -23,15 +23,19 @@ module Decidim
 
       #-----------------------------------------------------------
       private
+
       #-----------------------------------------------------------
 
-      def is_idcatmobil_method
-        return true if oauth_data['method'] == 'idcatmobil'
+      def idcatmobil_method?
+        return true if oauth_data["method"] == "idcatmobil"
+
         errors.add(:base, I18n.t("decidim.verifications.idcat_mobil.errors.invalid_method"))
         false
       end
-      def has_ok_status
-        return true if oauth_data['status'] == 'ok'
+
+      def has_ok_status?
+        return true if oauth_data["status"] == "ok"
+
         errors.add(:base, I18n.t("decidim.verifications.idcat_mobil.errors.invalid_status"))
         false
       end

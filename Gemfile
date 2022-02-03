@@ -10,12 +10,14 @@ ruby RUBY_VERSION
 gemspec
 
 group :development, :test do
-  gem "byebug"
   gem "bootsnap"
-  gem "decidim", git: "https://github.com/decidim/decidim"
-  gem "decidim-dev", git: "https://github.com/decidim/decidim"
+  gem "byebug"
+  gem "decidim", "~> 0.24.0"
+  gem "decidim-dev", "~> 0.24.0"
+  gem "faker", "~> 2.19"
+  gem "rubocop"
+  gem "rubocop-rspec"
   gem "social-share-button"
-  gem "faker", "~> 1.9"
 end
 
 group :development do
