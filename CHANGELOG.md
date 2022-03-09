@@ -3,6 +3,9 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.1.1 (PATCH)
+- Update gems with security patches
+
 ## Version 0.1.0 (MINOR)
 - CI: Introduce continuous integration via GitHub Actions.
 - CI: Apply `rubocop` recommendations.
