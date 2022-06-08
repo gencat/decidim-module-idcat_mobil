@@ -5,6 +5,7 @@ Following Semantic Versioning 2.
 
 ## Version 0.1.1 (PATCH)
 - Update gems with security patches
+- Update `decidim-idcat_mobil` to depend upon `omniauth` "~> 2.0.4"
 
 ## Version 0.1.0 (MINOR)
 - CI: Introduce continuous integration via GitHub Actions.
