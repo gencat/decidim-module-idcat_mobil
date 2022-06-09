@@ -12,8 +12,8 @@ gemspec
 group :development, :test do
   gem "bootsnap"
   gem "byebug"
-  gem "decidim", "~> 0.24.0"
-  gem "decidim-dev", "~> 0.24.0"
+  gem "decidim", "~> 0.25.2"
+  gem "decidim-dev", "~> 0.25.2"
   gem "faker", "~> 2.19"
   gem "rubocop"
   gem "rubocop-rspec"

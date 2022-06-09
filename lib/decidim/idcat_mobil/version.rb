@@ -4,11 +4,11 @@ module Decidim
   module IdcatMobil
     def self.version
       # See CHANGELOG.md to see what changed
-      "0.1.1.dev"
+      "0.1.1"
     end
 
     def self.decidim_version
-      "0.24.3"
+      "0.25.2"
     end
   end
 end
