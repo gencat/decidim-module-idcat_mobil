@@ -3,7 +3,7 @@ Following Semantic Versioning 2.
 
 ## next version:
 
-## Version 0.1.1 (PATCH)
+## Version 0.2.0 (MINOR)
 - Update gems with security patches
 - Update `decidim-idcat_mobil` to depend upon `omniauth` "~> 2.0.4"
 
