@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    decidim-idcat_mobil (0.2.0)
+    decidim-idcat_mobil (0.2.1)
       decidim (>= 0.25.2)
       decidim-core (>= 0.25.2)
       omniauth-idcat_mobil (~> 0.4.0)
