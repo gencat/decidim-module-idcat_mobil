@@ -3,6 +3,9 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.2.1 (PATCH)
+- Expose IdCat mòbil icon via webpacker (the icon has been renamed to avoid conflicts so it should be changed in the apps, see new name in Usage/omniauth-idcat_mobil configuration in the README)
+
 ## Version 0.2.0 (MINOR)
 - Update gems with security patches
 - Update `decidim-idcat_mobil` to depend upon `omniauth` "~> 2.0.4"
