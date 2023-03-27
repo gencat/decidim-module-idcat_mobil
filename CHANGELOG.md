@@ -3,6 +3,10 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.3.0 (MINOR)
+- Update omniauth-idcat_mobil: Send the client_id and the client_secret during the AuthToken retrieval.
+- Bump Ruby version to 2.7.7.
+
 ## Version 0.2.1 (PATCH)
 - Expose IdCat mòbil icon via webpacker (the icon has been renamed to avoid conflicts so it should be changed in the apps, see new name in Usage/omniauth-idcat_mobil configuration in the README)
 
