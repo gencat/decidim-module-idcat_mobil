@@ -31,7 +31,7 @@ Check how to configure the strategy in [Decidim's related documentation](https:/
   omniauth:
     idcat_mobil:
       enabled: true
-      icon_path: decidim/idcat_mobil/idcat_mobil-icon.svg
+      icon_path: media/images/idcat_mobil-icon.svg
 ```
 
 Remember to set `IDCAT_MOBIL_CLIENT_ID`, `IDCAT_MOBIL_CLIENT_SECRET` and `IDCAT_MOBIL_SITE_URL` environment variables.
