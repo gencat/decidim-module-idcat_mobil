@@ -2,6 +2,7 @@
 Following Semantic Versioning 2.
 
 ## next version:
+- DOC: Define the correct icon_path configuration value in README
 
 ## Version 0.3.0 (MINOR)
 - Update omniauth-idcat_mobil: Send the client_id and the client_secret during the AuthToken retrieval.
