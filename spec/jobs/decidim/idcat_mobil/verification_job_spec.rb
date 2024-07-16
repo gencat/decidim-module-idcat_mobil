@@ -33,6 +33,7 @@ module Decidim::IdcatMobil
       def initialize(*args); end
       # rubocop: enable Lint/MissingSuper
     end
+
     # rubocop: enable Lint/ConstantDefinitionInBlock
     def stub_decidim_publisher(clazz, called_method, event_to_publish, *published_event_args)
       stub_const(clazz, Class.new(TestDecidimPublisher) do
