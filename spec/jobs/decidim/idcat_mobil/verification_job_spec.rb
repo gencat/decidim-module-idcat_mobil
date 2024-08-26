@@ -27,15 +27,16 @@ module Decidim::IdcatMobil
     end
 
     # rubocop: disable Lint/ConstantDefinitionInBlock
-    class TestRectifyPublisher < Rectify::Command
+    class TestDecidimPublisher < Decidim::Command
       include Wisper::Publisher
       # rubocop: disable Lint/MissingSuper
       def initialize(*args); end
       # rubocop: enable Lint/MissingSuper
     end
+
     # rubocop: enable Lint/ConstantDefinitionInBlock
-    def stub_rectify_publisher(clazz, called_method, event_to_publish, *published_event_args)
-      stub_const(clazz, Class.new(TestRectifyPublisher) do
+    def stub_decidim_publisher(clazz, called_method, event_to_publish, *published_event_args)
+      stub_const(clazz, Class.new(TestDecidimPublisher) do
         define_method(called_method) do |*_args|
           publish(event_to_publish, *published_event_args)
         end
@@ -46,7 +47,7 @@ module Decidim::IdcatMobil
       context "when authorization is created with success" do
         it "notifies the user for the success" do
           pending_to_be_finished
-          stub_rectify_publisher("Decidim::Verifications::AuthorizeUser", :call, :ok)
+          stub_decidim_publisher("Decidim::Verifications::AuthorizeUser", :call, :ok)
           expect(Decidim::EventsManager)
             .to receive(:publish)
             .with(
@@ -66,7 +67,7 @@ module Decidim::IdcatMobil
       context "when authorization creation fails" do
         it "notifies the user for the failure" do
           pending_to_be_finished
-          stub_rectify_publisher("Decidim::Verifications::AuthorizeUser", :call, :invalid)
+          stub_decidim_publisher("Decidim::Verifications::AuthorizeUser", :call, :invalid)
           expect(Decidim::EventsManager)
             .to receive(:publish)
             .with(
