@@ -14,9 +14,11 @@ group :development, :test do
   gem "byebug"
   gem "decidim"
   gem "decidim-dev"
-  gem "faker", "~> 2.19"
-  gem "rubocop"
-  gem "rubocop-rspec"
+  gem "faker"
+  # Set versions because Property AutoCorrect errors.
+  gem "rspec-rails", "~> 6.0.4"
+  gem "rubocop-factory_bot", "2.25.1"
+  gem "rubocop-rspec", "2.26.1"
   gem "social-share-button"
 end
 
