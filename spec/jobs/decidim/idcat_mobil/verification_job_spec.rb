@@ -29,9 +29,9 @@ module Decidim::IdcatMobil
     # rubocop: disable Lint/ConstantDefinitionInBlock
     class TestDecidimPublisher < Decidim::Command
       include Wisper::Publisher
-      # rubocop: disable Lint/MissingSuper
-      def initialize(*args); end
-      # rubocop: enable Lint/MissingSuper
+      def initialize(*args)
+        super
+      end
     end
 
     # rubocop: enable Lint/ConstantDefinitionInBlock
