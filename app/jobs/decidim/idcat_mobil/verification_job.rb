@@ -25,7 +25,7 @@ module Decidim
 
       # Retrieves handler from Verification workflows registry.
       def retrieve_handler(oauth_data)
-        Decidim::AuthorizationHandler.handler_for("idcat_mobil", oauth_data: oauth_data)
+        Decidim::AuthorizationHandler.handler_for("idcat_mobil", oauth_data:)
       end
 
       def notify_user(user, status, handler)
@@ -36,7 +36,7 @@ module Decidim
           # resource: result,
           recipient_ids: [user.id],
           extra: {
-            status: status,
+            status:,
             errors: handler.errors.full_messages
           }
         )

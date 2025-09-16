@@ -11,7 +11,7 @@ module Decidim::IdcatMobil
     end
 
     let!(:user) { create(:user) }
-    let!(:identity) { create(:identity, provider: "idecat_mobil", user: user) }
+    let!(:identity) { create(:identity, provider: "idecat_mobil", user:) }
     let(:oauth_data) do
       {
         user_id: user.id,

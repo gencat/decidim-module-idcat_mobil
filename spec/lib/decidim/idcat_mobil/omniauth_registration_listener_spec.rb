@@ -7,7 +7,7 @@ module Decidim::IdcatMobil
     describe "when omniauth_registration event is notified" do
       let(:raw_data) { { email: "some@example.org" } }
       let(:data) do
-        { provider: provider, raw_data: raw_data }
+        { provider:, raw_data: }
       end
 
       context "when it is an IdCat mòbil registration" do
