@@ -10,8 +10,7 @@ ruby RUBY_VERSION
 gemspec
 
 require_relative "lib/decidim/idcat_mobil/version"
-# DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}"
-DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = { github: "CodiTramuntana/decidim", branch: "release/0.29-stable", require: true }.freeze
+DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}"
 
 group :development, :test do
   gem "bootsnap"
