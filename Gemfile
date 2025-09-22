@@ -12,13 +12,15 @@ gemspec
 require_relative "lib/decidim/idcat_mobil/version"
 DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}".freeze
 
+# concurrent-ruby v1.3.5 has removed the dependency on logger. Remove this line after upgrading rails to 7.1.
+gem "concurrent-ruby", "1.3.4"
+
 group :development, :test do
   gem "bootsnap"
   gem "byebug"
   gem "decidim", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   gem "decidim-dev", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   gem "faker"
-  # Set versions because Property AutoCorrect errors.
   gem "rspec-rails", "~> 6.0.4"
   gem "rubocop-factory_bot", "~> 2.26.1"
   gem "rubocop-rspec", "~> 3.0"

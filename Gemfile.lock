@@ -127,7 +127,7 @@ GEM
     childprocess (5.1.0)
       logger (~> 1.5)
     commonmarker (0.23.12)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.4)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -798,6 +798,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   byebug
+  concurrent-ruby (= 1.3.4)
   decidim (~> 0.29.0)
   decidim-dev (~> 0.29.0)
   decidim-idcat_mobil!
