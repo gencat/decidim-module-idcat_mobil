@@ -10,7 +10,7 @@ ruby RUBY_VERSION
 gemspec
 
 require_relative "lib/decidim/idcat_mobil/version"
-DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}"
+DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}".freeze
 
 group :development, :test do
   gem "bootsnap"
