@@ -3,7 +3,7 @@
 $LOAD_PATH.push File.expand_path("lib", __dir__)
 
 require "decidim/idcat_mobil/version"
-DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = ">= #{Decidim::IdcatMobil.decidim_version}"
+DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = ">= #{Decidim::IdcatMobil.decidim_version}".freeze
 
 Gem::Specification.new do |s|
   s.version = Decidim::IdcatMobil.version
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = ["oliver.vh@coditramuntana.com"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/decidim/decidim-idcat_mobil"
-  s.required_ruby_version = ">= 3.1.1"
+  s.required_ruby_version = ">= 3.2.9"
 
   s.name = "decidim-idcat_mobil"
   s.summary = "A decidim idcat_mobil module"
@@ -22,6 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency "decidim", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   s.add_dependency "decidim-core", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   s.add_dependency "omniauth-idcat_mobil", "~> 0.5.0"
-  s.add_development_dependency "decidim-dev", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   s.metadata["rubygems_mfa_required"] = "true"
 end

@@ -3,6 +3,10 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.6.0 (MINOR)
+- Upgrade Decidim version to 0.29
+- Bump Ruby version to 3.2.9
+
 ## Version 0.5.0 (MINOR)
 - Upgrade Decidim version to 0.28
 - Bump Ruby version to 3.1.1
