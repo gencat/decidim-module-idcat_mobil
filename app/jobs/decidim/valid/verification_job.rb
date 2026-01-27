@@ -7,7 +7,7 @@ module Decidim
 
       def perform(oauth_data)
         authorization ||= Decidim::Authorization.find_by(unique_id: handler.unique_id)
-        already_granted = authorization&.granted?
+        return if authorization&.granted?
 
         handler = retrieve_handler(oauth_data)
         Decidim::Verifications::AuthorizeUser.call(handler) do
