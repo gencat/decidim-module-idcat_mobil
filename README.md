@@ -3,7 +3,7 @@
 User registration and login through IdCat Mòbil, an authentication method that uses OAuth 2.0 protocol.
 _IdCat mòbil_ is an identity validator from VÀLid (Validador d'Identitats del Consorci AOC).
 
-User verification via IdCat Mòbil was started but is incomplete.
+User is also verified with a VÀLid authorization.
 
 ## Installation
 

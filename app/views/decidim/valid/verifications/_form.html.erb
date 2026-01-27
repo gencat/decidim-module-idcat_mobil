@@ -1,0 +1,39 @@
+<%
+  provider_str = t("decidim.authorization_handlers.valid_handler.name")
+%>
+<% if Devise.mappings[:user].omniauthable? && current_organization.enabled_omniauth_providers.dig(:idcat_mobil, :enabled) %>
+
+  <h5><%= t("decidim.authorization_handlers.trusted_ids_handler.explanation") %></h5>
+
+  <p><%= t(".description_html", provider: provider_str, link: t("devise.shared.links.log_in_with_provider", provider: provider_str)) %></p>
+  <div class="callout secondary"><%= t(".warning_html", email: current_user.email, provider: provider_str) %></div>
+
+  <div class="social-register">
+    <%= link_to decidim.send("user_idcat_mobil_omniauth_authorize_path"), class: "button button--social button--#{normalize_provider_name(idcat_mobil)}", method: :post do %>
+      <span class="button--social__icon">
+        <%= oauth_icon provider %>
+      </span>
+      <span class="button--social__text">
+        <%= t("devise.shared.links.log_in_with_provider", provider: provider_str) %>
+      </span>
+    <% end %>
+  </div>
+<% else %>
+  <p><%= t(".error_provider_html", provider: provider_str) %></p>
+<% end %>
+
+<div class="cancel">
+  <%= form.submit t(".cancel"), class: "button expanded secondary hollow" %>
+</div>
+
+<style>
+  .social-register,.cancel {
+    margin: 2em 3em;
+  }
+  .actions {
+    display: none;
+  }
+  .skip {
+    display: none;
+  }
+</style>

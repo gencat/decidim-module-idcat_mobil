@@ -1,14 +1,17 @@
 ---
 es:
   decidim:
-    components:
-      idcat_mobil:
-        name: IdCat Mòbil
+    authorization_handlers:
+      valid_handler:
+        name: VÀLid
+      valid:
+        name: VÀLid
     verifications:
-      idcat_mobil:
+      valid:
         errors:
           invalid_method: No se pudo verificar. El método de verificación OAuth2 no fue 'idcat_mobil' como se esperaba.
           invalid_status: No se pudo verificar. La verificación OAuth2 no ha sido correcta.
+      idcat_mobil:
         invalid:
           email_intro: No ha sido posible otorgarle la autorización IdCat Mòbil.
           email_outro: Por favor, póngase en contacto con el soporte en su plataforma para comprobar qué ha fallado.
