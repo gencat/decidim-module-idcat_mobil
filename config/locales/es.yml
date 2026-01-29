@@ -5,6 +5,7 @@ es:
       valid_handler:
         name: VÀLid
       valid:
+        explanation: Verificación de identidad a través de VÀLid
         name: VÀLid
     verifications:
       valid:

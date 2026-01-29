@@ -5,7 +5,7 @@ en:
       valid_handler:
         name: VÀLid
       valid:
-        explanation: You're verified by VÀLid
+        explanation: Identity verification through VÀLid
         name: VÀLid
     verifications:
       valid:

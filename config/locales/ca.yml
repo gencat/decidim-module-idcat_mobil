@@ -2,8 +2,10 @@
 ca:
   decidim:
     authorization_handlers:
+      valid_handler:
+        name: VÀLid
       valid:
-        explanation: Veri
+        explanation: Verificació d'identitat a través de VÀLid
         name: VÀLid
     verifications:
       valid:
