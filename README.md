@@ -19,6 +19,13 @@ And then execute:
 bundle install
 ```
 
+Verifications by default will expire after 90 days but optionally you can set it to your needs by setting the `VERIFICATION_EXPIRATION_TIME` environment variable.
+
+```bash
+# change default value from 90 days to a whole year
+VERIFICATION_EXPIRATION_TIME=365
+```
+
 ## Usage
 
 To use it you have to first configure the omniauth-idcat_mobil.
