@@ -16,6 +16,13 @@ module Decidim
         # root to: "idcat_mobil#index"
       end
 
+      initializer "decidim_valid.authorizations" do
+        # Triggers user verification after login/registration
+        ActiveSupport::Notifications.subscribe "decidim.user.omniauth_registration" do |_name, data|
+          Decidim::Valid::OnOmniauthRegistrationListener.on_omniauth_registration(data)
+        end
+      end
+
       initializer "decidim_idcat_mobil.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)
       end

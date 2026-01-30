@@ -2,9 +2,9 @@
 
 require "spec_helper"
 
-require "decidim/verifications/id_cat_mobil_handler"
+require "decidim/verifications/valid_handler"
 
-module Decidim::IdcatMobil
+module Decidim::Valid
   describe VerificationJob do
     def pending_to_be_finished
       pending("Implementation pending, this Decidim module does not support user verification")
