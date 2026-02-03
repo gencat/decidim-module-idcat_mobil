@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 module Decidim
-  module IdcatMobil
+  module Valid
     class VerificationJob < ApplicationJob
       queue_as :default
 
       def perform(oauth_data)
+        authorization ||= Decidim::Authorization.find_by(unique_id: handler.unique_id)
+        return if authorization&.granted?
+
         handler = retrieve_handler(oauth_data)
         Decidim::Verifications::AuthorizeUser.call(handler) do
           on(:ok) do
@@ -25,7 +28,7 @@ module Decidim
 
       # Retrieves handler from Verification workflows registry.
       def retrieve_handler(oauth_data)
-        Decidim::AuthorizationHandler.handler_for("idcat_mobil", oauth_data:)
+        Decidim::AuthorizationHandler.handler_for(:valid, oauth_data:)
       end
 
       def notify_user(user, status, handler)

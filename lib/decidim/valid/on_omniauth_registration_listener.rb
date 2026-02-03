@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Decidim
-  module IdcatMobil
+  module Valid
     #
     # Simply delegates the management of verifying IdCat mòbil to the VerificationJob.
     #

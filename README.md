@@ -3,7 +3,7 @@
 User registration and login through IdCat Mòbil, an authentication method that uses OAuth 2.0 protocol.
 _IdCat mòbil_ is an identity validator from VÀLid (Validador d'Identitats del Consorci AOC).
 
-User verification via IdCat Mòbil was started but is incomplete.
+User is also verified with a VÀLid authorization.
 
 ## Installation
 
@@ -17,6 +17,13 @@ And then execute:
 
 ```bash
 bundle install
+```
+
+Verifications by default will expire after 90 days but optionally you can set it to your needs by setting the `VERIFICATION_EXPIRATION_TIME` environment variable.
+
+```bash
+# change default value from 90 days to a whole year
+VERIFICATION_EXPIRATION_TIME=365
 ```
 
 ## Usage

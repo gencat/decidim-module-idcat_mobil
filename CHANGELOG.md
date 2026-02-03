@@ -3,9 +3,16 @@ Following Semantic Versioning 2.
 
 ## next version:
 
-## Version 0.7.0 (MINOR)
+## Version 0.8.0 (MINOR)
 - Upgrade Decidim version to 0.30
 - Bump Ruby version to 3.3.4
+
+## Version 0.7.0 (MINOR)
+- Refactor to use Decidim::Valid namespace.
+- Add pending views and translations.
+- Verify the user with a :valid Authorization after successful registration.
+- Upgrade to omniauth-idcat_mobil 0.6.0 to fix bug when Decidim does slice on the AuthHash.
+- Added optional VERIFICATION_EXPIRATION_TIME env var.
 
 ## Version 0.6.0 (MINOR)
 - Upgrade Decidim version to 0.29

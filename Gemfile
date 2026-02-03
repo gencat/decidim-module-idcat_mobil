@@ -14,6 +14,8 @@ DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION = "~> #{Decidim::IdcatMobil.decidim_version}
 
 # concurrent-ruby v1.3.5 has removed the dependency on logger. Remove this line after upgrading rails to 7.1.
 gem "concurrent-ruby", "1.3.4"
+gem "omniauth-idcat_mobil", "~> 0.6.0"
+gem "uri", "1.0.4"
 
 group :development, :test do
   gem "bootsnap"

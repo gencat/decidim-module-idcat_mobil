@@ -1,14 +1,18 @@
 ---
 oc:
   decidim:
-    components:
-      idcat_mobil:
-        name: IdCat Mòbil
+    authorization_handlers:
+      valid_handler:
+        name: VÀLid
+      valid:
+        explanation: Verificació d'identitat a través de VÀLid
+        name: VÀLid
     verifications:
-      idcat_mobil:
+      valid:
         errors:
           invalid_method: No vos auetz pogut verificar. Eth metòde de verificacion OAuth2 non ère "idcat_mobil" tau coma se demoraue.
           invalid_status: No vos auetz pogut verificar. Era verificacion OAuth2 a estat corrècta.
+      idcat_mobil:
         invalid:
           email_intro: Non s'a pogut concedir era autorizacion de IdCat Mòbil.
           email_outro: Se vos platz, metetz-vos eth contacte damb eth supòrt dera vòsta plataforma entà verificar er error que s'a produsit.

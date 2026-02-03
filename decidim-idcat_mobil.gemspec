@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "decidim", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   s.add_dependency "decidim-core", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
-  s.add_dependency "omniauth-idcat_mobil", "~> 0.5.0"
+  s.add_dependency "omniauth-idcat_mobil", "~> 0.6.0"
   s.metadata["rubygems_mfa_required"] = "true"
 end
