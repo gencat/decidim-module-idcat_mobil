@@ -63,7 +63,9 @@ jobs:
       
       - name: Generate test_app
         run: |
-          bundle exec rake test_app
+          RAILS_ENV=test bundle exec rails db:create
+          PGPASSWORD=${{ env.DB_PASSWORD }} psql -h ${{ env.DB_HOST }} -U ${{ env.DB_USERNAME }} -d ${{ env.DB_DATABASE }} -c "CREATE EXTENSION IF NOT EXISTS pgcrypto;"
+          RAILS_ENV=test bundle exec rails db:migrate
 
       - name: Run RSpec
         uses: nick-invision/retry@v3
