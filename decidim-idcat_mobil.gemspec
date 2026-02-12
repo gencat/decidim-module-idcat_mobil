@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = ["oliver.vh@coditramuntana.com"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/decidim/decidim-idcat_mobil"
-  s.required_ruby_version = ">= 3.2.9"
+  s.required_ruby_version = ">= 3.3.4"
 
   s.name = "decidim-idcat_mobil"
   s.summary = "A decidim idcat_mobil module"
