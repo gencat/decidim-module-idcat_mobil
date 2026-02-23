@@ -46,10 +46,6 @@ Remember to set `IDCAT_MOBIL_CLIENT_ID`, `IDCAT_MOBIL_CLIENT_SECRET` and `IDCAT_
 
 Refer to `omniauth-idcat_mobil` gem for further documentation.
 
-## TODO
-
-- User Verification development has to be finished.
-
 ## Contributing
 
 See [Decidim](https://github.com/decidim/decidim).

@@ -3,6 +3,9 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.8.1 (PATCH)
+- Fix invokation of `OnOmniauthRegistrationListener.on_omniauth_registration` after login/registration.
+
 ## Version 0.8.0 (MINOR)
 - Upgrade Decidim version to 0.30
 - Bump Ruby version to 3.3.4

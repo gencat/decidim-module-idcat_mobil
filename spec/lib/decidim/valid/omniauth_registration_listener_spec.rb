@@ -4,6 +4,7 @@ require "spec_helper"
 
 module Decidim::Valid
   describe OnOmniauthRegistrationListener do
+    subject { OnOmniauthRegistrationListener }
     describe "when omniauth_registration event is notified" do
       let(:raw_data) { { email: "some@example.org" } }
       let(:data) do
