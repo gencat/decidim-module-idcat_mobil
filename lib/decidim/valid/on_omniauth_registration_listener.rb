@@ -6,7 +6,7 @@ module Decidim
     # Simply delegates the management of verifying IdCat mòbil to the VerificationJob.
     #
     class OnOmniauthRegistrationListener
-      def on_omniauth_registration(oauth_data)
+      def self.on_omniauth_registration(oauth_data)
         VerificationJob.perform_later(oauth_data)
       end
     end

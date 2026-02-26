@@ -3,6 +3,8 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.7.1 (PATCH)
+- Fix invokation of `OnOmniauthRegistrationListener.on_omniauth_registration` after login/registration.
 
 ## Version 0.7.0 (MINOR)
 - Refactor to use Decidim::Valid namespace.
