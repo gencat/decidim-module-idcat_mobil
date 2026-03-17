@@ -10,7 +10,7 @@ module Decidim
       validate :idcatmobil_method?, :has_ok_status?
 
       def unique_id
-        oauth_data["identifier"]
+        oauth_data[:uid]
       end
 
       def metadata
@@ -31,14 +31,14 @@ module Decidim
       #-----------------------------------------------------------
 
       def idcatmobil_method?
-        return true if oauth_data["method"] == "idcatmobil"
+        return true if oauth_data.dig(:raw_data, :extra, :method) == "idcatmobil"
 
         errors.add(:base, I18n.t("decidim.verifications.valid.errors.invalid_method"))
         false
       end
 
       def has_ok_status?
-        return true if oauth_data["status"] == "ok"
+        return true if oauth_data.dig(:raw_data, :extra, :status) == "ok"
 
         errors.add(:base, I18n.t("decidim.verifications.valid.errors.invalid_status"))
         false
