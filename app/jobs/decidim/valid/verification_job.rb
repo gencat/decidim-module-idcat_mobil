@@ -6,17 +6,21 @@ module Decidim
       queue_as :default
 
       def perform(oauth_data)
-        authorization ||= Decidim::Authorization.find_by(unique_id: handler.unique_id)
+        oauth_data = oauth_data.deep_symbolize_keys
+        handler= retrieve_handler(oauth_data)
+        authorization= Decidim::Authorization.find_by(name: "valid", unique_id: handler.unique_id)
         return if authorization&.granted?
 
-        handler = retrieve_handler(oauth_data)
-        Decidim::Verifications::AuthorizeUser.call(handler) do
+        user= Decidim::User.find(oauth_data[:user_id])
+        Decidim::Verifications::AuthorizeUser.call(handler, user.organization) do
           on(:ok) do
+            Rails.logger.info("User #{user.id} verified successfully with VÀLid.")
             notify_user(handler.user, :ok, handler)
           end
 
           on(:invalid) do
-            notify_user(handler.user, :invalid, handler)
+            Rails.logger.error("Could not verify user #{user.id} with VÀLid: #{handler.errors.full_messages.join(", ")}")
+            notify_user(user, :invalid, handler) if user
           end
         end
       end
@@ -28,7 +32,7 @@ module Decidim
 
       # Retrieves handler from Verification workflows registry.
       def retrieve_handler(oauth_data)
-        Decidim::AuthorizationHandler.handler_for(:valid, oauth_data:)
+        Decidim::AuthorizationHandler.handler_for("valid", oauth_data:)
       end
 
       def notify_user(user, status, handler)
@@ -36,7 +40,7 @@ module Decidim
         Decidim::EventsManager.publish(
           event: "decidim.verifications.idcat_mobil.#{status}",
           event_class: notification_class,
-          # resource: result,
+          resource: user,
           recipient_ids: [user.id],
           extra: {
             status:,
