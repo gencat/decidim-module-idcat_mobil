@@ -41,7 +41,7 @@ module Decidim
           event: "decidim.verifications.idcat_mobil.#{status}",
           event_class: notification_class,
           resource: user,
-          recipient_ids: [user.id],
+          affected_users: [user],
           extra: {
             status:,
             errors: handler.errors.full_messages
