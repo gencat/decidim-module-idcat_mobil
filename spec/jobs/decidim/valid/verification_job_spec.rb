@@ -57,7 +57,7 @@ module Decidim::Valid
               event: "decidim.verifications.idcat_mobil.ok",
               event_class: Decidim::IdcatMobil::VerificationSuccessNotification,
               resource: user,
-              recipient_ids: [user.id],
+              affected_users: [user],
               extra: {
                 status: :ok,
                 errors: []
@@ -80,7 +80,7 @@ module Decidim::Valid
                     event: "decidim.verifications.idcat_mobil.invalid",
                     event_class: Decidim::IdcatMobil::VerificationInvalidNotification,
                     resource: user,
-                    recipient_ids: [user.id],
+                    affected_users: [user],
                     extra: hash_including(
                       status: :invalid,
                       errors: ["Unique cannot be blank"]
