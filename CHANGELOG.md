@@ -3,6 +3,9 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.7.2 (PATCH)
+- Fix user verification.
+
 ## Version 0.7.1 (PATCH)
 - Fix invokation of `OnOmniauthRegistrationListener.on_omniauth_registration` after login/registration.
 
