@@ -23,9 +23,9 @@ group :development, :test do
   gem "decidim", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   gem "decidim-dev", DECIDIM_IDCAT_MOBIL_DECIDIM_VERSION
   gem "faker"
-  gem "rspec-rails", "~> 6.0.4"
-  gem "rubocop-factory_bot", "~> 2.26.1"
-  gem "rubocop-rspec", "~> 3.0"
+  gem "rspec-rails"
+  gem "rubocop-factory_bot"
+  gem "rubocop-rspec"
 end
 
 group :development do
