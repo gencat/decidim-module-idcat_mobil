@@ -32,16 +32,33 @@ To use it you have to first configure the omniauth-idcat_mobil.
 
 ### omniauth-idcat_mobil configuration
 `IdCat mòbil` will be available as a configurable OAuth2 strategy.
-Check how to configure the strategy in [Decidim's related documentation](https://github.com/decidim/decidim/blob/develop/docs/services/social_providers.md). The summary is that you have to edit your `config/secrets.rb` and simply enable the strategy:
+Check how social providers work in [Decidim's related documentation](https://docs.decidim.org/en/develop/services/social_providers).
 
-```yaml
-  omniauth:
-    idcat_mobil:
-      enabled: true
-      icon_path: media/images/idcat_mobil-icon.svg
+Since Decidim 0.31, OmniAuth providers are no longer configured in `config/secrets.yml`. This module registers the `idcat_mobil` provider in `Decidim.omniauth_providers` automatically, so you only have to set these environment variables:
+
+```bash
+IDCAT_MOBIL_CLIENT_ID=your-client-id
+IDCAT_MOBIL_CLIENT_SECRET=your-client-secret
+IDCAT_MOBIL_SITE_URL=https://your-valid-site-url
 ```
 
-Remember to set `IDCAT_MOBIL_CLIENT_ID`, `IDCAT_MOBIL_CLIENT_SECRET` and `IDCAT_MOBIL_SITE_URL` environment variables.
+The provider is enabled when `IDCAT_MOBIL_CLIENT_ID` is present. The credentials can also be set (or overridden) per organization from the system panel (`/system`).
+
+If you need a custom configuration, define the provider in your app's `config/initializers/decidim.rb`. The module will not overwrite it:
+
+```ruby
+Decidim.configure do |config|
+  config.omniauth_providers[:idcat_mobil] = {
+    enabled: true,
+    client_id: ENV.fetch("IDCAT_MOBIL_CLIENT_ID", nil),
+    client_secret: ENV.fetch("IDCAT_MOBIL_CLIENT_SECRET", nil),
+    site_url: ENV.fetch("IDCAT_MOBIL_SITE_URL", nil),
+    icon_path: "media/images/idcat_mobil-icon.svg"
+  }
+end
+```
+
+Note: if your app replaces the whole hash (`config.omniauth_providers = { ... }`), you must include the `idcat_mobil` key there too, or the provider will be removed.
 
 
 Refer to `omniauth-idcat_mobil` gem for further documentation.
