@@ -2,8 +2,6 @@
 
 require "spec_helper"
 
-require "decidim/verifications/valid_handler"
-
 module Decidim::Valid
   describe VerificationJob do
     let!(:organization) { create(:organization, host: "#{SecureRandom.hex(10)}.example.com") }

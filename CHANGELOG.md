@@ -3,6 +3,10 @@ Following Semantic Versioning 2.
 
 ## next version:
 
+## Version 0.9.0 (MINOR)
+- Upgrade Decidim version to 0.31
+- Bump Node version to 22.23.4
+
 ## Version 0.8.2 (PATCH)
 - Fix user verification.
 
